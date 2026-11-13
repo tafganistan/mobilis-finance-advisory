@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Poppins', ui-sans-serif, system-ui, sans-serif;
+  --color-navy-900: #0f2748;
+  --color-navy-700: #1b3a66;
+  --color-navy-50: #eef2f8;
+  --color-gold-500: #c9a227;
+  --color-gold-600: #a9871c;
+  --color-gold-100: #f7f0d8;
+}
+
+@layer components {
+  .btn { @apply inline-flex items-center justify-center rounded-full bg-navy-900 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-navy-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-500; }
+  .btn-gold { @apply bg-gold-500 text-navy-900 hover:bg-gold-600 hover:text-white; }
+  .btn-outline { @apply border border-navy-900 bg-transparent text-navy-900 hover:bg-navy-900 hover:text-white; }
+  .btn-sm { @apply px-3.5 py-1.5 text-xs; }
+  .input { @apply w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm focus:border-navy-700 focus:outline-2 focus:outline-gold-500; }
+  /* Champs de formulaire « premium » (rubrique Sessions) */
+  .field { @apply w-full rounded-2xl border border-slate-200 bg-slate-50/70 px-4 py-3 text-sm text-slate-800 transition placeholder:text-slate-400 hover:border-slate-300 hover:bg-white focus:border-gold-500 focus:bg-white focus:outline-none focus:ring-4 focus:ring-gold-500/20; }
+  .field-icon { @apply pl-11; }
+  .field-label { @apply mb-1.5 block text-[11px] font-bold uppercase tracking-wider text-slate-500; }
+  .card { @apply rounded-2xl border border-slate-200 bg-white p-5; }
+  .th { @apply px-3 py-2 text-left text-xs font-semibold text-slate-500; }
+  .td { @apply border-t border-slate-100 px-3 py-2.5 text-sm; }
+}
